@@ -1,0 +1,10 @@
+<h1>Edit a Restaurant</h1>
+<%= form_for(@restaurant) do |t| %>
+  <%= t.label :name  %>
+  <%= t.text_field :name %>
+  <%= t.label :address  %>
+  <%= t.text_field :address %>
+  <%= t.label :category  %>
+  <%= t.select :category, options_for_select(["chinese", "italian", "japanese", "french", "belgian"]) %>
+  <%= t.submit %>
+  <% end %>
